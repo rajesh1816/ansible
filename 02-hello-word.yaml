@@ -1,0 +1,8 @@
+#!/bin/bash
+
+- name: print the hello-word
+  hosts: local
+  tasks:
+  - name: print the hello world
+    ansible.builtin.debug:
+      msg: "Hi, Hello world"
