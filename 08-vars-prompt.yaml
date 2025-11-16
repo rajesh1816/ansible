@@ -3,11 +3,11 @@
 - name: variables from prompt
   hosts: worker-node
   vars_prompt:
-    name: USERNAME
+  - name: USERNAME
     prompt: Enter your username
     private: no
 
-    name: PASSWORD
+  - name: PASSWORD
     prompt: Enter your password
     private: true
 
