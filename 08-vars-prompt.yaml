@@ -1,0 +1,17 @@
+#!/bin/bash
+
+- name: variables from prompt
+  hosts: worker-node
+  vars_prompt:
+    name: USERNAME
+    prompt: Enter your username
+    private: no
+
+    name: PASSWORD
+    prompt: Enter your password
+    private: true
+
+  tasks:
+  - name: user info from prompts
+    ansible.builtin.debug:
+      msg: "Hi the username iS {{ USERNAME }} and the password is {{ PASSWORD }}"
