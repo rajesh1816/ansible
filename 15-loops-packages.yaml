@@ -2,6 +2,7 @@
 
 - name: loops in install packages ansible
   hosts: worker-node
+  become: yes
   tasks:
   - name: loops install multiple packages
     ansible.builtin.dnf:
