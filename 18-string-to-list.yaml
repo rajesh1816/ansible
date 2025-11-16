@@ -1,0 +1,10 @@
+#!/bin/nash
+
+- name: covert string to list
+  hosts: worker-node
+  vars:
+    PERSONS: "Rajesh,suresh,ramesh,dinesh"
+  tasks:
+  - name: convert string to list
+    ansible.builtin.debug:
+      msg: "Hi {{ PERSONS | split(',') }}"
