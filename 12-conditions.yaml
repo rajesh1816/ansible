@@ -1,0 +1,16 @@
+#!/bin/bash
+
+- name: conditions in ansible
+  hosts: worker-node
+  vars:
+    NUMBER: 75
+  tasks:
+  - name: print Number is greater than 100
+    ansible.builtin.debug:
+      msg: "{{ NUMBER }} is greater than 100 "
+    when NUMBER > 100
+  - name: print Number is less than 100
+    ansible.builtin.debug:
+      msg: "{{ NUMBER }} is less than 100 "
+    when NUMBER < 100
+  
