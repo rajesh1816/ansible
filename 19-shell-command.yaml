@@ -5,3 +5,8 @@
   tasks:
   - name: redirect ls -ltr output to /tmp/output file
     ansible.builtin.shell: "ls -ltr > /tmp/out.txt" 
+    register: command-result
+
+  - name: print the result
+    ansible.builtin.debug:
+      msg: "{{ command-result }}"
