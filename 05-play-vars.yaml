@@ -1,0 +1,12 @@
+#!/bin/nash
+
+- name: play level varibales
+  hosts: worker-node
+  vars:
+    COURSE: DevOps
+    DURATION: 120hr
+    DAYS: 140
+  tasks:
+  - name: play level varibles
+    ansible.builtin.debug:
+      msg: "Hello, I am learning {{ COURSE }} course and the duration is {{ DURATION }} and the days is {{ DAYS }}"
