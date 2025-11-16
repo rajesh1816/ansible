@@ -2,6 +2,7 @@
 
 - name: install the nginx
   hosts: worker-node
+  become: yes #this means giving sudo access
   tasks: 
   - name: install the nginx
     ansible.builtin.package:
