@@ -1,0 +1,10 @@
+#!/bin/nash
+
+- name: variables from files
+  hosts: worker-node
+  vars_files:
+  - course.yaml
+  tasks:
+  - name: variables from files
+    ansible.builtin.debug:
+      msg: "Hello, I am learning {{ COURSE }} course and the duration is {{ DURATION }} and the days is {{ DAYS }}"
