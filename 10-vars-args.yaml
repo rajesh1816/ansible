@@ -1,0 +1,8 @@
+#!/bin/bash
+
+- name: varibales from args
+  hosts: worker-node
+  tasks:
+  - name: variables from inventory
+    ansible.builtin.debug:
+      msg: "Hi i am learning {{ COURSE }} course and the duration is {{ DURATION }} and the days are {{ DAYS }}"

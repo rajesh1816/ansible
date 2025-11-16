@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#need to keep variables in inventory file as a group variables
 - name: varibales from group
   hosts: local
   connection: local
@@ -8,6 +8,8 @@
     ansible.builtin.debug:
       msg: "Hi i am learning {{ COURSE }} course and the duration is {{ DURATION }} and the days are {{ DAYS }}"
 
+
+#need to keep variables in inventory file as a Host variables
 
 - name: varibales from host 
   hosts: worker-node
