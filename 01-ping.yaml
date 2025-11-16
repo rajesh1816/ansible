@@ -1,0 +1,8 @@
+#!/bin/bash
+
+- name: ping the server
+  hosts: worker-node
+  tasks:
+  - name: ping the server
+    ansible.builtin.ping:
+      
