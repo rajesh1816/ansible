@@ -1,0 +1,13 @@
+#!/bin/bash
+
+- name: loops in install packages ansible
+  hosts: worker-node
+  tasks:
+  - name: loops install multiple packages
+    ansible.builtin.dnf:
+      name: {{ item }}
+      state: present
+    loop:
+    - nginx
+    - mysql
+    - python3
