@@ -1,8 +1,16 @@
 #!/bin/bash
 
-- name: varibales from inventory
+- name: varibales from group
   hosts: local
   connection: local
+  tasks:
+  - name: variables from inventory
+    ansible.builtin.debug:
+      msg: "Hi i am learning {{ COURSE }} course and the duration is {{ DURATION }} and the days are {{ DAYS }}"
+
+
+- name: varibales from host 
+  hosts: worker-node
   tasks:
   - name: variables from inventory
     ansible.builtin.debug:
