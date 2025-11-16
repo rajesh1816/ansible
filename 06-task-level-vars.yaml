@@ -1,0 +1,12 @@
+#!/bin/bash
+
+- name: task level varibales
+  hosts: worker-node
+  vars:
+    COURSE: DevOps with AWS
+  tasks:
+  - name: task level varibales
+    vars:
+      COURSE: ansible
+    ansible.builtin.debug:
+      msg: "Hi, i am learning {{ COURSE }} course right now"
