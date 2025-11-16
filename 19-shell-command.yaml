@@ -4,4 +4,4 @@
   hosts: worker-node
   tasks:
   - name: redirect ls -ltr output to /tmp/output file
-    ansible.builtin.shell: ls -ltr > /tmp/out.txt" 
+    ansible.builtin.shell: "ls -ltr > /tmp/out.txt" 
