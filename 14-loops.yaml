@@ -1,0 +1,13 @@
+#!/bin/bash
+
+- name: loops in ansible
+  hosts: worker-node
+  tasks:
+  - name: loops
+    ansible.builtin.debug:
+      msg: "Hi {{ item }}"
+    loop:
+    - rajesh
+    - suresh
+    - ramesh
+    - venkatesh
