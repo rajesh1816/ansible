@@ -1,0 +1,15 @@
+#!/bin/bash
+
+- name: install the nginx
+  hosts: worker-node
+  tasks: 
+  - name: install the nginx
+    ansible.builtin.package:
+      name: nginx
+      state: installed
+
+  - name: start and enabled the nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started  
+      enabled: yes
