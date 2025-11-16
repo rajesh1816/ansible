@@ -2,6 +2,8 @@
 
 - name: functions
   hosts: worker-node
+  vars:
+    PERSON: "suresh"
   tasks:
   - name: functions
     ansible.builtin.debug:
