@@ -2,6 +2,7 @@
 
 - name: install the nginx
   hosts: worker-node
+  become: yes
   tasks:
   - name: install nginx if RHEL
     ansible.builtin.dnf:
