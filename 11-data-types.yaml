@@ -1,0 +1,24 @@
+#!/bin/bash
+
+- name: datatypes in ansible
+  hosts: worker-node
+  vars:
+    COURSE: DevOps with AWS #string
+    DURATION: 130 #integer
+    IS_LIVE: yes # boolean
+    TOOLS: #List
+    - Linux
+    - Git
+    - jenkins
+    - ansible
+    - Docker
+    CONCEPTS: # map or dictonary or object
+      CI: jenkins
+      SCRIPTING: shell, ansible, terraform, python
+  
+  tasks:
+  - name: datatypes in ansible
+    ansible.builtin.debug:
+      msg: "Hi the course is {{ COURSE }} and the duration is {{ DURATION }} and days are {{ DAYS }} and it is {{ IS_LIVE }} and the tools used {{ TOOLS }} and concepts are {{ CONCEPTS }}"
+
+
