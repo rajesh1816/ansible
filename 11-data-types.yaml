@@ -18,6 +18,6 @@
   tasks:
   - name: datatypes in ansible
     ansible.builtin.debug:
-      msg: "Hi the course is {{ COURSE }} and the duration is {{ DURATION }} and days are {{ DAYS }} and it is {{ IS_LIVE }} and the tools used {{ TOOLS }} and concepts are {{ CONCEPTS }}"
+      msg: "Hi the course is {{ COURSE }} and the duration is {{ DURATION }} and it is {{ IS_LIVE }} and the tools used {{ TOOLS }} and concepts are {{ CONCEPTS }}"
 
 
