@@ -3,5 +3,5 @@
 - name: command vs shell
   hosts: worker-node
   tasks:
-  - name: redirect ls -ltr output to /tmp/output filr
-    ansible.builtin.command: ls -ltr > /tmp/out.txt" #this commnad wont work
+  - name: redirect ls -ltr output to /tmp/output file
+    ansible.builtin.shell: ls -ltr > /tmp/out.txt" 
