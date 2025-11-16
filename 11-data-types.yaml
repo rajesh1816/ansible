@@ -15,7 +15,6 @@
     CONCEPTS: # map or dictonary or object
       CI: jenkins
       SCRIPTING: shell, ansible, terraform, python
-  
   tasks:
   - name: datatypes in ansible
     ansible.builtin.debug:
