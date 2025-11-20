@@ -14,3 +14,9 @@
     ansible.builtin.command: useradd roboshop
     when: output.rc != 0 # it means above task failure
 
+  - name: roboshop user already exist
+    ansible.builtin.debug:
+      msg: "roboshop user is already exist"
+    when: output.rc == 0 # it means above tasks is success.
+     
+
