@@ -5,5 +5,8 @@
   connection: local
   tasks:
   - name: checking the roboshop user exist or not
-    become: yes
     ansible.builtin.command: id roboshop
+    ignore_errors: yes
+    register: output
+
+    
