@@ -1,6 +1,6 @@
 #!/bin/bash
 
-- name: error handling
+- name: Error handling
   hosts: local 
   connection: local
   tasks:
@@ -9,4 +9,8 @@
     ignore_errors: yes
     register: output
 
-    
+  - name: creat roboshop user
+    become: yes
+    ansible.builtin.command: useradd roboshop
+    when: output.rc != 0 # it means above task failure
+
